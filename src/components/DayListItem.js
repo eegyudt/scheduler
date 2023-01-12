@@ -3,16 +3,20 @@ import classnames from "classnames";
 import "components/DayListItem.scss";
 
 export default function DayListItem(props) {
-  let spotsText;
+  let spotsText = '';
+
   const formatSpots = () => {
     if (props.spots === 0) {
-      return spotsText = 'no spots remaining';
+      spotsText = 'no spots remaining';
+      return spotsText;
     }
     if (props.spots === 1) {
-      return spotsText = '1 spot remaining';
+      spotsText = '1 spot remaining';
+      return spotsText;
     }
     if (props.spots > 1) {
-      return spotsText = `${props.spots} spots remaining`;
+      spotsText = `${props.spots} spots remaining`;
+      return spotsText;
     }
   };
 
