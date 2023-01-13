@@ -1,6 +1,4 @@
-import React from "react";
-
-export function getAppointmentsForDay(state, day) {
+export default function getAppointmentsForDay(state, day) {
   const appointmentsArray = [];
 
   for (let element of state.days) {
