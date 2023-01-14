@@ -3,7 +3,9 @@ import axios from "axios";
 import "components/Application.scss";
 import DayList from "./DayList";
 import Appointment from "./Appointment";
-import {getAppointmentsForDay, getInterview} from "../helpers/selectors.js";
+import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "../helpers/selectors.js";
+// import useVisualMode from "hooks/useVisualMode";
+
 
 
 export default function Application(props) {
@@ -20,25 +22,7 @@ export default function Application(props) {
   });
 
   const setDay = day => setState({ ...state, day });
-  // const setDays = days => setState(prev => ({ ...prev, days }));
-  // const setAppointments = days => setState(prev => ({ ...prev, appointments }));
-  // const setInterviewer = days => setState(prev => ({ ...prev, interviewer }));
-  // const setInterviewers = days => setState(prev => ({ ...prev, interviewers }));
 
-  // const dailyAppointments = getAppointmentsForDay(state, state.day);
-  const appointments = getAppointmentsForDay(state, state.day);
-
-  const schedule = appointments.map((appointment) => {
-    const interview = getInterview(state, appointment.interview);
-    return (
-      <Appointment
-        key={appointment.id}
-        id={appointment.id}
-        time={appointment.time}
-        interview={interview}
-      />
-    );
-  });
   useEffect(() => {
     Promise.all([
       axios.get(`/api/days`),
@@ -49,6 +33,23 @@ export default function Application(props) {
         setState(prev => ({ ...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data }));
       });
   }, []);
+
+
+  const appointments = getAppointmentsForDay(state, state.day);
+  const interviewers = getInterviewersForDay(state, state.day);
+  // console.log(interviewers);
+  const schedule = appointments.map((appointment) => {
+    const interview = getInterview(state, appointment.interview);
+    return (
+      <Appointment
+        key={appointment.id}
+        id={appointment.id}
+        time={appointment.time}
+        interview={interview}
+        interviewers={interviewers}
+      />
+    );
+  });
 
 
   // console.log("state.interviewers", state.interviewers)
@@ -75,7 +76,8 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-          <Appointment/>{schedule}<Appointment key="last" time="5pm" />
+        {schedule}
+        <Appointment key="last" time="5pm" />
       </section>
     </main>
   );

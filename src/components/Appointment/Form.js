@@ -1,4 +1,5 @@
-import React, { useState } from 'react'; import Button from "components/Button";
+import React, { useState } from 'react'; 
+import Button from "components/Button";
 import InterviewerList from "components/InterviewerList";
 
 export default function Form(props) {
@@ -15,11 +16,10 @@ export default function Form(props) {
     reset();
     props.onCancel();
   };
-
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">
-        <form autoComplete="off" onSubmit={event => event.preventDefault()}>
+        <form autoComplete="off" >
           <input
             className="appointment__create-input text--semi-bold"
             name="name"
