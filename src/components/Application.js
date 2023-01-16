@@ -47,9 +47,41 @@ export default function Application(props) {
         time={appointment.time}
         interview={interview}
         interviewers={interviewers}
+        bookInterview={bookInterview}
       />
     );
   });
+
+
+  function bookInterview(id, interview) {
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+
+    // setState({ ...state, appointments });
+
+    // axios.put(' /api/appointments/:id', appointments)
+    // .then(response => element.innerHTML = response.data.updatedAt);
+    console.log(id, interview);
+
+    return axios.put(`/api/appointments/${id}`, { interview })
+      .then((response) => {
+        console.log("Inside Axios PUT request");
+
+        setState({ ...state, appointments });
+        console.log("application response >>>", response);
+      });
+
+
+  }
+
+
 
 
   // console.log("state.interviewers", state.interviewers)
