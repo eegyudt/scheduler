@@ -19,7 +19,3 @@ export default function useVisualMode(initialMode) {
   const obj = { mode: history[history.length - 1], transition, back };
   return obj;
 }
-
-  // const [mode, setMode] = useState(initialMode);
-// console.log("typeof history>>>>>>>>>>>>>>>>>>>>>>>>>>", typeof history);
-// console.log(" history>>>>>>>>>>>>>>>>>>>>>>>>>>", history);
