@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from "components/Button";
 import InterviewerList from "components/InterviewerList";
 
@@ -27,8 +27,12 @@ export default function Form(props) {
       setError("please select an interviewer");
       return;
     }
-    props.onSave(student, interviewer)
+    props.onSave(student, interviewer);
   }
+
+  useEffect(() => {
+    setError("");
+  }, [interviewer, student]);
 
   return (
     <main className="appointment__card appointment__card--create">
@@ -40,7 +44,7 @@ export default function Form(props) {
             type="text"
             placeholder="Enter Student Name"
             value={student}
-            onChange={(event) => setStudent(event.target.value)}
+            onChange={(event) => { setStudent(event.target.value) }}
             data-testid="student-name-input"
           />
         </form>
