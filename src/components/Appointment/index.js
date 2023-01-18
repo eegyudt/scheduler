@@ -89,7 +89,7 @@ const Appointment = (props) => {
         onClose={() => transition(CREATE)} />}
       {mode === ERROR_DELETE && <Error
         message="Appointment could not be deleted"
-        onClose={() => transition(CREATE)} />}
+        onClose={back} />}
     </article>
   );
 };
