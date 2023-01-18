@@ -44,7 +44,9 @@ const Appointment = (props) => {
     props
       .cancelInterview(props.id)
       .then(() => transition(EMPTY))
-      .catch(error => transition(ERROR_DELETE, true));
+      .catch(error => {
+        console.log("Error in cancelInterview", error)
+        transition(ERROR_DELETE, true)});
   };
 
 
