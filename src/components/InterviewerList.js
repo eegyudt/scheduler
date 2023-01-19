@@ -23,10 +23,10 @@ const InterviewerList = function(props) {
       <ul className="interviewers__list">{interviewers}</ul>
     </section>
   );
-}
+};
 
 InterviewerList.propTypes = {
   interviewers: PropTypes.array.isRequired
 };
 
-export default InterviewerList
+export default InterviewerList;

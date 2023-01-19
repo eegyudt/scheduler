@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -48,7 +48,6 @@ storiesOf("DayListItem", module) //Initiates Storybook and registers our DayList
   ));
 
 //DayList
-
 const days = [
   {
     id: 1,
@@ -84,7 +83,6 @@ storiesOf("DayList", module)
 
 
 // InterviewerListItem
-
 const interviewer = {
   id: 1,
   name: "Sylvia Palmer",
@@ -120,7 +118,6 @@ storiesOf("InterviewerListItem", module)
 
 
 //InterviewerList
-
 const interviewers = [
   { id: 1, name: "Sylvia Palmer", avatar: "https://i.imgur.com/LpaY82x.png" },
   { id: 2, name: "Tori Malcolm", avatar: "https://i.imgur.com/Nmx0Qxo.png" },
@@ -153,7 +150,6 @@ storiesOf("InterviewerList", module)
 
 
 // Appointment/index.js
-
 storiesOf("Appointment", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]
@@ -215,4 +211,4 @@ storiesOf("Appointment", module)
       />
       <Appointment time="5pm" />
     </Fragment>
-  ))
+  ));

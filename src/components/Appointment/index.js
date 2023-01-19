@@ -9,8 +9,6 @@ import Error from "./Error";
 import useVisualMode from "hooks/useVisualMode";
 import Status from "./Status";
 
-
-
 const Appointment = (props) => {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
@@ -36,7 +34,6 @@ const Appointment = (props) => {
 
       transition(SHOW);
     }).catch(error => transition(ERROR_SAVE, true));
-
   };
 
   const remove = () => {
@@ -45,11 +42,9 @@ const Appointment = (props) => {
       .cancelInterview(props.id)
       .then(() => transition(EMPTY))
       .catch(error => {
-        console.log("Error in cancelInterview", error)
-        transition(ERROR_DELETE, true)});
+        transition(ERROR_DELETE, true);
+      });
   };
-
-
 
   return (
     <article className="appointment" data-testid="appointment">

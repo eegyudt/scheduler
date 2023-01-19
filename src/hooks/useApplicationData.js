@@ -21,9 +21,6 @@ const useApplicationData = () => {
 
   }, []);
 
-
-
-
   const bookInterview = (id, interview) => {
     const appointment = {
       ...state.appointments[id],
@@ -68,35 +65,28 @@ const useApplicationData = () => {
       [id]: appointment
     };
 
-
-
-
-
     const dayFinder = state.days.find((day) => day.appointments.includes(id));
     const newDays = (prev) => prev.days.map((day, index) => {
-      
+
       if (day.id === dayFinder.id) {
-        
+
         return { ...day, spots: day.spots + 1 };
       } else {
         return day;
       }
     });
 
-
-
-
     return axios.delete(`/api/appointments/${id}`)
       .then(() => {
 
         setState((prev) => {
-          const days = newDays(prev)
+          const days = newDays(prev);
           return {
             ...prev,
             appointments,
             days
-          }
-        })
+          };
+        });
 
         // setState((prev) => {
         //   ...prev,

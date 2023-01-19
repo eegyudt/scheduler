@@ -8,7 +8,6 @@ export default function useVisualMode(initialMode) {
     setHistory(prev => replace ? [...prev.slice(0, -1), newMode] : [...prev, newMode]);
   };
 
-
   const back = function() {
 
     if (history.length > 1) {

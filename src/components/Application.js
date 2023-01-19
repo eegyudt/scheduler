@@ -6,10 +6,6 @@ import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "../h
 import useApplicationData from "../hooks/useApplicationData";
 
 
-// import useVisualMode from "hooks/useVisualMode";
-
-
-
 export default function Application(props) {
 
   const {
@@ -22,7 +18,7 @@ export default function Application(props) {
   const appointments = getAppointmentsForDay(state, state.day);
   const interviewers = getInterviewersForDay(state, state.day);
 
-    const schedule = appointments.map((appointment) => {
+  const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
     return (
       <Appointment
@@ -36,7 +32,6 @@ export default function Application(props) {
       />
     );
   });
-
 
   return (
     <main className="layout">
