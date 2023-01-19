@@ -18,7 +18,14 @@ This project was based on the starter code provided by Lighthouse Labs as part o
 
 ## Final Product Screenshots
 
+- Scheduler add appointment:
+![Scheduler add appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Add.PNG)
 
+- Scheduler edit appointment:
+![Scheduler edit appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Edit.PNG)
+
+- Scheduler delete appointment:
+![Scheduler delete appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Delete.PNG)
 
 
 ## Dependencies
