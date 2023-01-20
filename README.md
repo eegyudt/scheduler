@@ -1,7 +1,7 @@
 # Interview Scheduler
 
 ***Interview scheduler*** is a single page app for scheduling interviews developed using React. The database is pesisted by the API server using a PostgreSQL, and communicates with the API server over HTTP using Axios client. 
-This project was based on the starter code provided by Lighthouse Labs as part of their Web Development Bootcamp, and developed to a functional app by Eszter Egyud.
+This project was based on the starter code provided by [Lighthouse Labs](http://www.lighthouselabs.ca/) as part of their Web Development Bootcamp, and developed to a functional app by Eszter Egyud.
 
 
 ## Getting Started
@@ -13,8 +13,8 @@ This project was based on the starter code provided by Lighthouse Labs as part o
 - [ ] Scheduler API project Github repository: 
   [Click here to open on Github](https://github.com/eegyudt/scheduler-api)
 - [ ] Follow the README instructions from the scheduler API, and start it using the ```npm start``` command. The API will be served at http://localhost:8001/
-- [ ] Start the web server using the ```npm start``` command. The app will be served at http://localhost:8080/.
-- [ ] Go to http://localhost:8080/ in your browser for the Scheduler app.
+- [ ] Start the web server using the ```npm start``` command. The app will be served at http://localhost:8000/.
+- [ ] Go to http://localhost:8000/ in your browser for the Scheduler app.
 
 
 ## Final Product Screenshots
