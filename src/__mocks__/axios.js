@@ -1,3 +1,4 @@
+// Mock database
 const fixtures = {
   days: [
     {
@@ -53,6 +54,7 @@ const fixtures = {
   }
 };
 
+// Testing get put and delete requests
 export default {
   get: jest.fn(url => {
     if (url === "/api/days") {

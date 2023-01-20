@@ -4,6 +4,7 @@ import Appointment from "components/Appointment";
 
 afterEach(cleanup);
 
+// Testing appointment component rendering
 describe("Appointment", () => {
 
   it("renders without crashing", () => {

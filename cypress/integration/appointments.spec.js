@@ -1,4 +1,5 @@
 describe("Appointments", () => {
+  
   beforeEach(() => {
     cy.request("GET", "/api/debug/reset");
 
@@ -7,6 +8,7 @@ describe("Appointments", () => {
     cy.contains("Monday");
   });
 
+  // Testing appintment booking
   it("should book an interview", () => {
     cy.get("[alt=Add]")
       .first()
@@ -21,6 +23,7 @@ describe("Appointments", () => {
     cy.contains(".appointment__card--show", "Sylvia Palmer");
   });
 
+  // Testing edit function
   it("should edit an interview", () => {
     cy.get("[alt=Edit]")
       .first()
@@ -35,14 +38,15 @@ describe("Appointments", () => {
     cy.contains(".appointment__card--show", "Tori Malcolm");
   });
 
+  // Testing cancel function
   it("should cancel an interview", () => {
     cy.get("[alt=Delete]")
       .click({ force: true });
   
     cy.contains("Confirm").click();
   
-    cy.contains("DELETING").should("exist");
-    cy.contains("DELETING").should("not.exist");
+    cy.contains("Deleting").should("exist");
+    cy.contains("Deleting").should("not.exist");
   
     cy.contains(".appointment__card--show", "Archie Cohen")
       .should("not.exist");

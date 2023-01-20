@@ -4,6 +4,7 @@ import Button from "components/Button";
 
 afterEach(cleanup);
 
+// Testing button component rendering
 it("renders without crashing", () => {
   render(<Button />);
 });
@@ -14,25 +15,25 @@ it("renders its `children` prop as text", () => {
   expect(getByText("Default")).toBeInTheDocument();
 });
 
-
+// Testing button style rendering
 it("renders a default button style", () => {
   const { getByText } = render(<Button>Default</Button>);
   expect(getByText("Default")).toHaveClass("button");
 });
 
-
+// Testing confirm button
 it("renders a confirm button", () => {
   const { getByText } = render(<Button confirm>Confirm</Button>);
   expect(getByText("Confirm")).toHaveClass("button--confirm");
 });
 
-
+// Testing danger button
 it("renders a danger button", () => {
   const { getByText } = render(<Button danger>Danger</Button>);
   expect(getByText("Danger")).toHaveClass("button--danger");
 });
 
-
+// Testing clickable button
 it("renders a clickable button", () => {
   const handleClick = jest.fn();
   const { getByText } = render(
@@ -43,7 +44,7 @@ it("renders a clickable button", () => {
   expect(handleClick).toHaveBeenCalledTimes(1);
 });
 
-
+// Testing disabled/non-clickable button
 it("renders a disabled button", () => {
   const handleClick = jest.fn();
   const { getByText } = render(

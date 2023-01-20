@@ -9,6 +9,8 @@ import Error from "./Error";
 import useVisualMode from "hooks/useVisualMode";
 import Status from "./Status";
 
+
+// Appointment component
 const Appointment = (props) => {
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
@@ -24,6 +26,7 @@ const Appointment = (props) => {
     props.interview ? SHOW : EMPTY
   );
 
+  // Save interview
   const save = (name, interviewer) => {
     const interview = {
       student: name,
@@ -36,6 +39,7 @@ const Appointment = (props) => {
     }).catch(error => transition(ERROR_SAVE, true));
   };
 
+  // Cancel interview
   const remove = () => {
     transition(DELETING, true);
     props
@@ -67,11 +71,11 @@ const Appointment = (props) => {
           onCancel={back}
         />
       }
-      {mode === SAVING && <Status message="SAVING" />}
-      {mode === CONFIRM && <Confirm message="CONFIRM"
+      {mode === SAVING && <Status message="Saving" />}
+      {mode === CONFIRM && <Confirm message="Confirm"
         onCancel={back}
         onConfirm={remove} />}
-      {mode === DELETING && <Status message="DELETING" />}
+      {mode === DELETING && <Status message="Deleting" />}
       {mode === EDIT && <Form
         student={props.interview.student}
         interviewer={props.interview.interviewer.id}

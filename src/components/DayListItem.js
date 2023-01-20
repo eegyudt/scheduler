@@ -2,9 +2,11 @@ import React from 'react';
 import classnames from "classnames";
 import "components/DayListItem.scss";
 
+// List interviews and interview spots for days
 export default function DayListItem(props) {
   let spotsText = '';
 
+  // Format text for number of spots remaining
   const formatSpots = () => {
     if (props.spots === 0) {
       spotsText = 'no spots remaining';

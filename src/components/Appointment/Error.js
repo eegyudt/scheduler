@@ -1,5 +1,6 @@
 import React from "react";
 
+// Error component
 export default function Error(props) {
 
   return (

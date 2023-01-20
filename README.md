@@ -6,11 +6,11 @@ This project was based on the starter code provided by Lighthouse Labs as part o
 ## Getting Started
 
 1. Interview Scheduler project Github repository: 
-  [Interview Scheduler App Repository](https://github.com/eegyudt/scheduler)
+  [Click here to opne on Github](https://github.com/eegyudt/scheduler)
 2. Clone your repository onto your local device.
 4. Install dependencies using the npm install command.
 3. Scheduler API project Github repository: 
-  [Interview Scheduler API Repository](https://github.com/eegyudt/scheduler-api)
+  [Click here to opne on Github](https://github.com/eegyudt/scheduler-api)
 5. Follow the README instructions from the scheduler API, and start it using the npm start command. The API will be served at http://localhost:8001/
 4. Start the web server using the npm start command. The app will be served at http://localhost:8080/.
 5. Go to http://localhost:8080/ in your browser for the Scheduler app.

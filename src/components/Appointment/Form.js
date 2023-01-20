@@ -2,29 +2,33 @@ import React, { useState, useEffect } from 'react';
 import Button from "components/Button";
 import InterviewerList from "components/InterviewerList";
 
+// Form component
 export default function Form(props) {
 
   const [student, setStudent] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
+  // Reset form data
   const reset = () => {
     setStudent("");
     setInterviewer(null);
   };
 
+  // Cancel form submission
   const cancel = () => {
     reset();
     props.onCancel();
   };
 
+  // Validate user inpu
   function validate(student, interviewer) {
     if (student === "") {
-      setError("student name cannot be blank");
+      setError("Student name cannot be blank");
       return;
     }
     if (interviewer === null) {
-      setError("please select an interviewer");
+      setError("Please select an interviewer");
       return;
     }
     props.onSave(student, interviewer);

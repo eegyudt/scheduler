@@ -19,7 +19,7 @@ import Status from "components/Appointment/Status.js";
 import Error from "components/Appointment/Error.js";
 import Form from "components/Appointment/Form";
 
-
+// StoryBook tests for Button component
 storiesOf("Button", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
@@ -36,6 +36,7 @@ storiesOf("Button", module)
     </Button>
   ));
 
+  // StoryBook tests for DayListItem module
 storiesOf("DayListItem", module) //Initiates Storybook and registers our DayListItem component
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
@@ -47,7 +48,7 @@ storiesOf("DayListItem", module) //Initiates Storybook and registers our DayList
     <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
   ));
 
-//DayList
+//DayList test data
 const days = [
   {
     id: 1,
@@ -66,6 +67,7 @@ const days = [
   },
 ];
 
+// StoryBook tests for DayList module
 storiesOf("DayList", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }],
@@ -82,7 +84,7 @@ storiesOf("DayList", module)
 
 
 
-// InterviewerListItem
+// StoryBook tests for InterviewerListItem
 const interviewer = {
   id: 1,
   name: "Sylvia Palmer",
@@ -117,7 +119,7 @@ storiesOf("InterviewerListItem", module)
   ));
 
 
-//InterviewerList
+//InterviewerList test data
 const interviewers = [
   { id: 1, name: "Sylvia Palmer", avatar: "https://i.imgur.com/LpaY82x.png" },
   { id: 2, name: "Tori Malcolm", avatar: "https://i.imgur.com/Nmx0Qxo.png" },
@@ -126,6 +128,7 @@ const interviewers = [
   { id: 5, name: "Sven Jones", avatar: "https://i.imgur.com/twYrpay.jpg" }
 ];
 
+// StoryBook tests for InterviewerList
 storiesOf("InterviewerList", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
@@ -149,7 +152,7 @@ storiesOf("InterviewerList", module)
   ));
 
 
-// Appointment/index.js
+// StoryBook tests for Appointment component
 storiesOf("Appointment", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]

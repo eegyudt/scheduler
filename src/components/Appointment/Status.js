@@ -1,5 +1,6 @@
 import React from "react";
 
+// Status component
 export default function Status(props) {
 
   return (
