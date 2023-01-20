@@ -1,31 +1,31 @@
 # Interview Scheduler
 
-Interview scheduler is a single page app for scheduling interviews developed using React. The database is pesisted by the API server using a PostgreSQL database and communicates with the API server over HTTP using Axios client. 
-This project was based on the starter code provided by Lighthouse Labs as part of the Web Development Bootcamp, and developed to a functional app by Eszter Egyud.
+***Interview scheduler*** is a single page app for scheduling interviews developed using React. The database is pesisted by the API server using a PostgreSQL database and communicates with the API server over HTTP using Axios client. 
+This project was based on the starter code provided by @lighthouse-labs as part of the Web Development Bootcamp, and developed to a functional app by Eszter Egyud.
 
 ## Getting Started
 
-1. Interview Scheduler project Github repository: 
-  [Click here to opne on Github](https://github.com/eegyudt/scheduler)
-2. Clone your repository onto your local device.
-4. Install dependencies using the npm install command.
-3. Scheduler API project Github repository: 
-  [Click here to opne on Github](https://github.com/eegyudt/scheduler-api)
-5. Follow the README instructions from the scheduler API, and start it using the npm start command. The API will be served at http://localhost:8001/
-4. Start the web server using the npm start command. The app will be served at http://localhost:8080/.
-5. Go to http://localhost:8080/ in your browser for the Scheduler app.
+- [] ***Interview Scheduler*** project Github repository: 
+  [Click here to open on Github](https://github.com/eegyudt/scheduler)
+- [] Clone your repository onto your local device.
+- [] Install dependencies using the ```npm install``` command.
+- [] Scheduler API project Github repository: 
+  [Click here to open on Github](https://github.com/eegyudt/scheduler-api)
+- [] Follow the README instructions from the scheduler API, and start it using the ```npm start``` command. The API will be served at http://localhost:8001/
+- [] Start the web server using the ```npm start``` command. The app will be served at http://localhost:8080/.
+- [] Go to http://localhost:8080/ in your browser for the Scheduler app.
 
 
 ## Final Product Screenshots
 
 - Scheduler add appointment:
-![Scheduler add appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Add.PNG)
+![##Scheduler: new appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Add.PNG)
 
 - Scheduler edit appointment:
-![Scheduler edit appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Edit.PNG)
+![##Scheduler: edit appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Edit.PNG)
 
 - Scheduler delete appointment:
-![Scheduler delete appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Delete.PNG)
+![##Scheduler: delete appointment](https://github.com/eegyudt/scheduler/blob/master/docs/Scheduler_Delete.PNG)
 
 
 ## Dependencies
